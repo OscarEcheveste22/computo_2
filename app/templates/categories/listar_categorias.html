@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Categorías{% endblock %}
+
+{% block content %}
+<div class="columns">
+    <div class="column is-offset-3 is-6">
+        <a href="{{ url_for('categories.add_category') }}" class="button is-success">
+            <i class="fa-solid fa-plus"></i> &nbsp; Agregar categoría
+        </a>
+        <br><br>
+
+        {% for category in categories %}
+        <div class="card">
+            <div class="card-content">
+                <div class="media">
+                    <div class="media-content">
+                        <p class="title is-4">{{ category.name }}</p>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

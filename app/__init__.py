@@ -22,11 +22,11 @@ from app.models import Post, Category
 
 # Importar y registrar blueprints
 from app.routes.post import posts_bp
-
+from app.routes.category import categories_bp
 
 # Registrar blueprints
 app.register_blueprint(posts_bp, url_prefix='/posts')
-
+app.register_blueprint(categories_bp, url_prefix='/categories')
 
 # Ruta principal
 @app.route('/')
