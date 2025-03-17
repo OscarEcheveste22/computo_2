@@ -18,7 +18,14 @@
                         <p class="title is-4">{{ category.name }}</p>
                     </div>
                 </div>
-               
+                <div class="content">
+                    <a href="{{ url_for('categories.update_category', id=category.id) }}" class="button is-small is-link is-outlined">
+                        <i class="fa-solid fa-pen-to-square"></i> Editar
+                    </a>
+                    <a href="{{ url_for('categories.delete_category', id=category.id) }}" class="button is-small is-danger is-outlined">
+                        <i class="fa-solid fa-trash"></i> Eliminar
+                    </a>
+                </div>
             </div>
         </div>
         {% endfor %}
